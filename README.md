@@ -80,7 +80,7 @@ models/          Neural network architectures
 plots/           Figures used in analysis and documentation
 scripts/         Dataset construction utilities
 src/             AIS processing and feature engineering pipeline
-exported/        Generated embeddings and clustering outputs
+exported/        32-D trajectory embeddings and HDBSCAN cluster assignments
 ```
 
 ## Pipeline
@@ -106,6 +106,38 @@ AIS Trajectories
 * Scikit-Learn
 * Matplotlib
 * HDF5
+
+## Reproducing the Pipeline
+
+### 1. Build AIS Trajectory Dataset
+
+```bash
+bash run_build_dataset.sh
+```
+
+### 2. Apply Trajectory Compression
+
+```bash
+bash run_compress_dataset.sh
+```
+
+### 3. Generate HDF5 Trajectory Representations
+
+```bash
+bash run_hdf5_generation.sh
+```
+
+### 4. Train the Self-Supervised Model
+
+```bash
+bash run_train_model.sh
+```
+
+### 5. Generate Embeddings and Cluster Assignments
+
+```bash
+bash run_inference.sh
+```
 
 ## Disclaimer
 
