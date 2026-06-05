@@ -31,6 +31,22 @@ The study was conducted on AIS data collected during January–March 2021 and in
 * Domain: Maritime vessel behaviour analysis
 * Industrial partner: Scanjet AB
 
+
+
+## Trajectory Representation
+
+Each AIS trajectory segment is transformed into a four-channel image representation before self-supervised learning.
+
+| Channel | Description |
+|----------|-------------|
+| Geometry | Rasterized vessel trajectory path |
+| Drift | Difference between course-over-ground and heading |
+| Turning Angle | Change in course-over-ground between consecutive AIS messages |
+| Speed Variation | Change in speed-over-ground between consecutive AIS messages |
+
+![4-Channel Trajectory Representation](plots/4_channels.png)
+
+
 ## Results
 
 The learned latent representations successfully separate distinct behavioural patterns within the AIS dataset. HDBSCAN clustering identified several major behavioural groups as well as anomalous trajectories.
