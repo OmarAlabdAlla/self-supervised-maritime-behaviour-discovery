@@ -65,6 +65,10 @@ UMAP visualization of the learned embedding space:
 
 ![UMAP Embeddings](plots/umap_hdbscan_clean.png)
 
+Representative trajectories from the discovered behavioural clusters:
+
+![Representative Clusters](analysis/representative_clusters.png)
+
 ## Repository Structure
 
 ```text
