@@ -1,0 +1,92 @@
+# Self-Supervised Maritime Behaviour Discovery
+
+**AI/ML Applications to Identify Tank Cleaning Operations & Quantify Slop Discharge**
+
+Master's Thesis Project — MSc Data Science and AI
+Chalmers University of Technology
+Industrial Collaboration with Scanjet AB
+
+## Overview
+
+This project investigates the use of self-supervised deep learning for maritime behaviour discovery from Automatic Identification System (AIS) vessel trajectories. The objective is to automatically identify behavioural patterns associated with tank-cleaning operations and potential slop discharge events without relying on manually labelled data.
+
+The proposed pipeline transforms vessel trajectories into multi-channel image representations and learns latent behavioural embeddings using Bootstrap Your Own Latent (BYOL), a self-supervised representation learning framework. The learned embeddings are subsequently clustered using HDBSCAN to discover distinct operational behaviours present in large-scale AIS datasets.
+
+The study was conducted on AIS data collected during January–March 2021 and includes 91,431 vessel trajectories. The resulting workflow enables unsupervised discovery of maritime behavioural patterns and provides a scalable framework for environmental monitoring and maritime intelligence applications.
+
+## Key Contributions
+
+* Construction of a maritime trajectory processing pipeline from raw AIS data.
+* Generation of multi-channel trajectory representations suitable for deep learning.
+* Self-supervised representation learning using BYOL.
+* Behaviour discovery using HDBSCAN clustering.
+* Visualization of latent behavioural structure using UMAP.
+* Identification of operational patterns potentially related to tank-cleaning activities and slop discharge events.
+
+## Dataset
+
+* Source: AIS vessel trajectory data
+* Time period: January–March 2021
+* Number of trajectories: 91,431
+* Domain: Maritime vessel behaviour analysis
+* Industrial partner: Scanjet AB
+
+## Results
+
+The learned latent representations successfully separate distinct behavioural patterns within the AIS dataset. HDBSCAN clustering identified several major behavioural groups as well as anomalous trajectories.
+
+Cluster distribution:
+
+| Cluster    | Samples |
+| ---------- | ------: |
+| -1 (Noise) |  14,970 |
+| 0          |     199 |
+| 1          |   1,223 |
+| 2          |  63,809 |
+| 3          |  11,230 |
+
+UMAP visualization of the learned embedding space:
+
+![UMAP Embeddings](plots/umap_hdbscan_clean.png)
+
+## Repository Structure
+
+```text
+analysis/        Jupyter notebooks and cluster analysis
+configs/         Training and inference configurations
+datasets/        Dataset implementations
+helpers/         Configuration and utility functions
+models/          Neural network architectures
+plots/           Figures used in analysis and documentation
+scripts/         Dataset construction utilities
+src/             AIS processing and feature engineering pipeline
+exported/        Generated embeddings and clustering outputs
+```
+
+## Pipeline
+
+AIS Trajectories
+→ Feature Engineering
+→ Multi-Channel Image Generation
+→ BYOL Representation Learning
+→ Embedding Extraction
+→ HDBSCAN Clustering
+→ UMAP Visualization
+→ Behaviour Discovery
+
+## Technologies
+
+* Python
+* PyTorch
+* BYOL
+* HDBSCAN
+* UMAP
+* NumPy
+* Pandas
+* Scikit-Learn
+* Matplotlib
+* HDF5
+
+## Disclaimer
+
+The original AIS data and trained models are not included in this repository due to size and data-sharing restrictions. The repository contains the complete processing, training, inference, and analysis pipeline required to reproduce the methodology.
