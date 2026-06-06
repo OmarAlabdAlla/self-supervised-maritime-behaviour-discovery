@@ -22,11 +22,10 @@ The study was conducted on AIS data collected during January–March 2021 and in
 * Behaviour discovery using HDBSCAN clustering.
 * Visualization of latent behavioural structure using UMAP.
 * Identification of operational patterns potentially related to tank-cleaning activities and slop discharge events.
-
+  
 ## Methodology Overview
 
 ![Pipeline Overview](plots/pipeline_overview.png)
-
 
 ## Dataset
 
