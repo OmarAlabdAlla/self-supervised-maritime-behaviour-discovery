@@ -55,6 +55,19 @@ Each AIS trajectory segment is transformed into a four-channel image representat
 
 The learned latent representations successfully separate distinct behavioural patterns within the AIS dataset. HDBSCAN clustering identified several major behavioural groups as well as anomalous trajectories.
 
+### Experimental Summary
+
+| Item | Value |
+|--------|--------|
+| AIS Trajectories | 91,431 |
+| Representation | 4-Channel Trajectory Images |
+| Learning Method | BYOL |
+| Embedding Dimension | 32 |
+| Clusters Discovered | 4 |
+| Noise Fraction | 16.4% |
+| Clustering Method | HDBSCAN |
+| Visualization Method | UMAP |
+
 Cluster distribution:
 
 | Cluster    | Samples |
