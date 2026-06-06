@@ -73,6 +73,18 @@ Representative trajectories from the discovered behavioural clusters:
 
 ![Representative Clusters](analysis/representative_clusters.png)
 
+### Behavioural Interpretation
+
+- **Cluster 2 (63,809 trajectories):** Dominant transit behaviour characterized by relatively stable navigation patterns.
+
+- **Cluster 3 (11,230 trajectories):** More variable manoeuvring behaviour with increased trajectory curvature.
+
+- **Cluster 1 (1,223 trajectories):** Low-motion operational segments potentially consistent with stationary or near-stationary activities.
+
+- **Cluster 0 (199 trajectories):** Rare behavioural patterns requiring further investigation.
+
+- **Noise (-1):** Trajectories not confidently assigned to any behavioural cluster.
+
 ## Repository Structure
 
 ```text
