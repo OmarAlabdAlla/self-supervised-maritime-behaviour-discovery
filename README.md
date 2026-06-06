@@ -23,6 +23,11 @@ The study was conducted on AIS data collected during January–March 2021 and in
 * Visualization of latent behavioural structure using UMAP.
 * Identification of operational patterns potentially related to tank-cleaning activities and slop discharge events.
 
+## Methodology Overview
+
+![Pipeline Overview](plots/pipeline_overview.png)
+
+
 ## Dataset
 
 * Source: AIS vessel trajectory data
