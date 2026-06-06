@@ -5,12 +5,10 @@
 #SBATCH --cpus-per-task=64
 #SBATCH --mem=32G
 
-cd ~/exjobb/ml-analysis/jupyter_files/repo
+cd "$(dirname "$0")"
 
+# Activate your environment if needed
+# conda activate <your_environment>
 
-
-
-source /data/users/omarala/miniforge3/etc/profile.d/conda.sh
-conda activate exjobb_env
-
-python3 -u train_multilayer_model.py -c configs/double_layer_config.toml
+python3 -u train_multilayer_model.py \
+    -c configs/double_layer_config.toml
